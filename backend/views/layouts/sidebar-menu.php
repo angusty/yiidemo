@@ -56,7 +56,7 @@ echo Menu::widget(
                 ],
             ],
             [
-                'label' => Yii::t('app', 'System'),
+                'label' => Yii::t('app', 'Offline Business'),
                 'url' => ['#'],
                 'icon' => 'fa fa-cog',
                 'options' => [
@@ -64,15 +64,10 @@ echo Menu::widget(
                 ],
                 'items' => [
                     [
-                        'label' => Yii::t('app', 'User'),
-                        'url' => ['/user/index'],
+                        'label' => Yii::t('app', 'Sport Manager'),
+                        'url' => ['/sport-club/list'],
                         'icon' => 'fa fa-user',
                         //'visible' => (Yii::$app->user->identity->username == 'admin'),
-                    ],
-                    [
-                        'label' => Yii::t('app', 'Role'),
-                        'url' => ['/role/index'],
-                        'icon' => 'fa fa-lock',
                     ],
                 ],
             ],

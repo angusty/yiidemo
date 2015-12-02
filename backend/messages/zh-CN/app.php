@@ -73,7 +73,8 @@ return [
     'Comment' => '评论',
     'Tag' => '标签',
 
-    ''
+    'Offline Business' => '线下业务管理',
+    'Sport Manager' => '俱乐部管理'
 
 
 ];
