@@ -64,7 +64,7 @@ echo Menu::widget(
                 ],
                 'items' => [
                     [
-                        'label' => Yii::t('app', 'Sport Manager'),
+                        'label' => Yii::t('app', 'Club Manager'),
                         'url' => ['/sport-club/list'],
                         'icon' => 'fa fa-user',
                         //'visible' => (Yii::$app->user->identity->username == 'admin'),

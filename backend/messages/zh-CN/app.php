@@ -74,7 +74,12 @@ return [
     'Tag' => '标签',
 
     'Offline Business' => '线下业务管理',
-    'Sport Manager' => '俱乐部管理'
+    'Club Manager' => '俱乐部管理',
+    'Club' => '俱乐部',
+    'Club ' => '俱乐部',
+    'Clubname' => '俱乐部名字',
+    'Image' => '图片',
+    'Manager Uid' => '管理员id',
 
 
 ];
