@@ -10,7 +10,7 @@ class SportclubSeach extends Sportclub
     {
         return [
             [['cid', 'manager_uid'], 'integer'],
-            [['clubname'],'safe'],
+            [['clubname', 'indeximage'],'safe'],
             ['createtime', 'date']
         ];
     }
@@ -32,8 +32,14 @@ class SportclubSeach extends Sportclub
         }
 
         $query->andFilterWhere(
-            ['cid' => $this->cid]
+            [
+                'cid' => $this->cid,
+                'manager_uid' => $this->manager_uid,
+            ]
         );
+        $query->andFilterWhere(['like', 'indeximage', $this->indeximage]);
+        $query->andFilterWhere(['like', 'clubname', $this->clubname]);
+        $query->andFilterWhere(['>=', 'createtime', strtotime($this->createtime)]);
 
         return $data_provider;
 
