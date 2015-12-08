@@ -2,6 +2,7 @@
 namespace frontend\controllers;
 
 use yii\web\Controller;
+<<<<<<< HEAD
 use Yii;
 use yii\web\Cookie;
 
@@ -58,5 +59,19 @@ class TestController extends Controller
     public function actionShow()
     {
 
+=======
+use Knp\Snappy\Pdf;
+
+class TestController extends Controller
+{
+
+    public function actionIndex()
+    {
+        $snappy = new Pdf();
+        $return = $snappy->setBinary('/usr/local/bin/wkhtmltopdf');
+        var_dump($return);
+        echo 'ok';
+        return;
+>>>>>>> 611c365846b4448d7a3741ad10d8c92f4c5e344a
     }
 }

@@ -90,6 +90,7 @@ class Auth extends \yii\db\ActiveRecord
         return false;
     }
 
+
     public function updatePermission($name)
     {
         if ($this->validate()) {
@@ -100,13 +101,13 @@ class Auth extends \yii\db\ActiveRecord
         }
         return false;
     }
-
+    
     public function createRole($permissions)
     {
         if ($this->validate()) {
             $auth = Yii::$app->getAuthManager();
             $role = $auth->createRole($this->name);
-            $role->description = $this->description;;
+            $role->description = $this->description;
             if ($auth->add($role)) {
                 foreach ($permissions as $permission) {
                     $obj = $auth->getPermission($permission);
