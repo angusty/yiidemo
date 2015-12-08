@@ -30,7 +30,7 @@ class SportclubSeach extends Sportclub
         if (!($this->load($params) && $this->validate())) {
             return $data_provider;
         }
-
+        $query->joinWith();
         $query->andFilterWhere(
             [
                 'cid' => $this->cid,

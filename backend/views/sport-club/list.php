@@ -17,7 +17,7 @@ $this->title = Yii::t('app', 'Club Manager');
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
             'cid',
-//            'clubname',
+            'clubname',
 //            [
 //                'attribute' => 'indeximage',
 //                'value' => function ($model) {
@@ -30,7 +30,13 @@ $this->title = Yii::t('app', 'Club Manager');
 //                    ['class' => 'form-control', 'prompt' => Yii::t('app', 'Please Filter')]
 //                )
 //            ],
-            'indeximage',
+            [
+                'attribute' => 'indeximage',
+                'value' => function($model) {
+//                  return $model;
+                },
+
+            ],
             'manager_uid',
             //'created_at',
             [
